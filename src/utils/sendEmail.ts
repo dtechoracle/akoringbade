@@ -26,7 +26,7 @@ const sendEmail = async (options: EmailOptions): Promise<void> => {
 
     // Define mail options
     const mailOptions = {
-      from: '',
+      from: '7f4a9d002@smtp-brevo.com',
       to: options.to,
       subject: options.subject,
       html: options.message,

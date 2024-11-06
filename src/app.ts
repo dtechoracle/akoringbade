@@ -14,7 +14,7 @@ app.use(express.json());
   /* cors is used to allow cross origin requests */
 app.use(cors({
   methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'],
-  origin: 'https://akoringbade.com.ng',
+  origin: '*',
   credentials: true,
 }));
 

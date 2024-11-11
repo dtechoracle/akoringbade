@@ -35,7 +35,7 @@ WE CELEBRATE TOGETHER ON FRIDAY';
     
         await sendEmail({
             to: newUser.email,
-            subject: 'Akoringbade's listening party,
+            subject: 'Akoringbade's listening party',
             message,
         });
 

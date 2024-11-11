@@ -19,11 +19,23 @@ export default class WaitlistService{
     static async addUser(userData: { email: string }): Promise<IUser | null> {
         const { email } = userData;
         const newUser = await User.create({ email });
-        const message ='Thank you for signing up for AKORINGBADE The Album listening party. You have secured a seat at Album Listening in Dami’s room. You’d get a follow up email days to the event. Thank you for supporting Akoringbade';
+        const message ='Good day to my jolly people, how una Dey today? Congratulations once again as you have successfully secured a free seat for the AKORINGBADE listening party. 
+This one na owambe things ooo and we go Jaiye till dawn for Dami’s room. 
+Below are the details of the event. 
+
+Date : Friday, November 15th, 2024.
+Venue :  TRib3 Lagos 
+288B, Ajose Adeogun Street, Victoria Island, Lagos, Nigeria.
+Time : 9pm.
+
+NB: Once you kak better native attire enter the location, my ladies and gentlemen una go enter yakata with no palava. 
+Free entry sure for you🫶🏽🫶🏽
+See you there in your African attires 
+WE CELEBRATE TOGETHER ON FRIDAY';
     
         await sendEmail({
             to: newUser.email,
-            subject: 'Thanks for signing up for the newsletter 🚀',
+            subject: 'Akoringbade's listening party,
             message,
         });
 
